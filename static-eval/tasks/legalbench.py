@@ -23,7 +23,7 @@ def try_parse(completion):
 class LBTask(Task):
     def __init__(
         self,
-        data_loc: str = './data/test.tsv',
+        data_loc: str = './data/train.tsv',
         label_col: str = 'label',
         local: bool = True,
         prompt_loc: str = './data/base_prompt.txt'
