@@ -1,0 +1,15 @@
+test,metrics
+CUAD_Unlimited-All-You-Can-Eat-License,{'accuracy': 1.0}
+cuad_governing_law,{'accuracy': 1.0}
+maud_accuracy_of_fundamental_target_r&ws:_bringdown_standard,{'accuracy': 0.0}
+cuad_no-solicit_of_employees,{'accuracy': 1.0}
+learned_hands_domestic_violence,{'accuracy': 0.0}
+maud_ftr_triggers,{'accuracy': 1.0}
+maud_definition_includes_stock_deals,{'accuracy': 1.0}
+privacy_policy_entailment,{'accuracy': 0.875}
+contract_nli_permissible_acquirement_of_similar_information,{'accuracy': 1.0}
+"maud_accuracy_of_target_""general""_r&w:_bringdown_standard_answer",{'accuracy': 1.0}
+cuad_irrevocable_or_perpetual_license,{'accuracy': 1.0}
+definition_classification,{'accuracy': 1.0}
+cuad_cap_on_liability,{'accuracy': 1.0}
+textualism_tool_plain,{'accuracy': 1.0}

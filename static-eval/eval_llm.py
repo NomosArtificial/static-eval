@@ -20,8 +20,8 @@ from accelerate import init_empty_weights, load_checkpoint_and_dispatch
 from datasets import load_dataset
 from huggingface_hub import hf_hub_download
 from transformers import AutoTokenizer, AutoModelForCausalLM, AutoModelForSeq2SeqLM
-from .custom_hf_llm import CustomHFModel
-from .utils import chunked_iterable
+from custom_hf_llm import CustomHFModel
+from utils import chunked_iterable
 
 
 @dataclass
