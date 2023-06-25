@@ -26,8 +26,8 @@ class LBTask(Task):
         local: bool = True,
     ):
         super().__init__()
-        self.label_col = "answer"
-        self.data_loc = f"legalbench/{task}/test.tsv"
+        self.label_col = "label"
+        self.data_loc = f"legalbench/{task}/train.tsv"
         self.prompt_loc = f"legalbench/{task}/base_prompt.txt"
         self.local = local
 

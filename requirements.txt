@@ -1,0 +1,9 @@
+fire
+torch
+tqdm
+langchain
+accelerate
+datasets
+transformers
+openai
+pandas
