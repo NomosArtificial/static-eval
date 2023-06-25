@@ -29,7 +29,7 @@ class LBTask(Task):
         local: bool = True,
     ):
         super().__init__()
-        self.data_loc = f"legalbench/{task}/train.tsv"
+        self.data_loc = f"legalbench/{task}/train.tsv"  # TODO test.tsv for test data
         self.prompt_loc = f"legalbench/{task}/base_prompt.txt"
         self.label_col = label_col
         self.local = local
@@ -49,7 +49,7 @@ class LBTask(Task):
                 with open(self.prompt_loc) as in_file:
                     prompt_template = in_file.read()
             except:
-                prompt_template="{{document}}"
+                prompt_template = "{{document}}"
         else:
             prompt_template = requests.get(self.prompt_loc).text
 
