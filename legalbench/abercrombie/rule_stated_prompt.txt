@@ -1,0 +1,19 @@
+Determine the type of each mark under the Abercrombie spectrum.
+
+Q: The mark "Ivory" for a product made of elephant tusks. What is the type of mark?
+A: generic
+
+Q: The mark "Tasty" for bread. What is the type of mark?
+A: descriptive
+
+Q: The mark "Caress" for body soap. What is the type of mark?
+A: suggestive
+
+Q: The mark "Virgin" for wireless communications. What is the type of mark?
+A: arbitrary
+
+Q: The mark "Aswelly" for a taxi service. What is the type of mark?
+A: fanciful
+
+Q: {{text}} What is the type of mark?
+A:
