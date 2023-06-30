@@ -2,7 +2,7 @@
 
 This repo contains LegalBench's training set along with scripts for evaluating LLMs on that data. 
 
-The functions needed for eval can be found (here)[https://github.com/NomosArtificial/static-eval/blob/main/static-eval/task_utils.py].
+The functions needed for eval can be found [here](https://github.com/NomosArtificial/static-eval/blob/main/static-eval/task_utils.py).
 
 
 ## Notebooks and Scripts
