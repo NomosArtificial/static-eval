@@ -1,0 +1,13 @@
+Answer the following questions considering the state of international law on January 1st, 2020.
+
+Question: Consider the country of Bolivia. Does the country provide for period of residence in a residence-based acquisition? Answer Yes or No.
+Answer: Yes
+
+Question: Consider the country of Bhutan. Does the country provide for facilitated acquisition of citizenship (on easier terms than residence-based acquisition) by a person who is a citizen of a specific country and, if so, under which conditions? Answer Yes or No.
+Answer: No
+
+Question: Consider the country of Afghanistan. Does the country permit a parent to confer his or her citizenship on a child born in the territory of the country of citizenship and, if so, under which conditions? Answer Yes or No.
+Answer: Yes
+
+Question: {{question}} Answer Yes or No.
+Answer:
