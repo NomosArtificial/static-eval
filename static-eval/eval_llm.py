@@ -108,6 +108,32 @@ class EvalLLM:
                 max_tokens=config.max_new_tokens,
                 temperature=config.temperature,
             )
+        elif config.model_name in ["NousResearch/Llama-2-7b-hf"]:
+            checkpoint = config.model_name
+            weights_location = hf_hub_download(
+                checkpoint, "pytorch_model.bin.index.json"
+            )
+            tokenizer = AutoTokenizer.from_pretrained(checkpoint)
+
+            with init_empty_weights():
+                model = AutoModelForCausalLM.from_pretrained(checkpoint) 
+        
+            model = load_checkpoint_and_dispatch(
+                model=model,
+                checkpoint=weights_location,
+                dtype=torch.bfloat16,
+                device_map="auto",
+            )
+            model_kwargs = {
+                "temperature": config.temperature,
+                "max_new_tokens": config.max_new_tokens,
+            }
+            model = CustomHFModel(
+                model=model, tokenizer=tokenizer, generate_kwargs=model_kwargs
+            )
+            self.recommended_chunk_size = 4 
+
+
         elif "LawInformedAI/" in config.model_name:
             checkpoint = config.model_name
             weights_location = hf_hub_download(
