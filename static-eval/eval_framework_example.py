@@ -15,6 +15,7 @@ from datasets import load_dataset
 from eval_llm import EvalLLM, LLMConfig
 from datetime import datetime
 import pandas as pd
+import asyncio 
 
 
 task_dir = "legalbench"
@@ -47,21 +48,21 @@ config = LLMConfig(
 
 
 
-for task_name in tasks:
-    task = LBTask(task_name, train = False)
-    
-    data = task.prepare_data()
-    
-    llm = EvalLLM(config, task.prompt_template())
-    completions = await llm.run(data)
-    
-    metrics = task.score(data, completions)
-    print(metrics)
-    
-    # append task result to result_file
-    results_df = pd.DataFrame({"test": [task_name], "metrics": [metrics]})
-    results_df.to_csv(results_filename, mode="a", index=False, header=header)
-    header = False
+async def main():
+    for task_name in tasks:
+        task = LBTask(task_name, train = False)
+        
+        data = task.prepare_data()
+        
+        llm = EvalLLM(config, task.prompt_template())
+        completions = await llm.run(data)
+        
+        metrics = task.score(data, completions)
+        print(metrics)
+        
+        # append task result to result_file
+        results_df = pd.DataFrame({"test": [task_name], "metrics": [metrics]})
+        results_df.to_csv(results_filename, mode="a", index=False, header=header)
+        header = False
 
-
-
+asyncio.run(main())
